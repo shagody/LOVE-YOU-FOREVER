@@ -22,10 +22,8 @@ public class Main {
 		Main pcsTest = new Main();
 		scan = new Scanner(System.in);
 		while (scan.hasNext()) {
-
 			nowTime = 0;
 			n = scan.nextInt();
-
 			for (int i = 0; i < n; i++) {
 				name = "";
 				travelist = scan.next().split(",");
