@@ -22,3 +22,37 @@ for i = 1 : R
 end
 imshow(uint8(res)); % 显示图像
 ```
+## 镜像变换
+```
+I=rgb2gray(imread('F:/gakki.bmp'));
+subplot(131);imshow(I);title('原图像');
+[r,c]=size(I);
+res=zeros(r,c);
+vmirror=[-1 0 0;0 1 0; 0 0 1];
+hmirror=[1 0 0;0 -1 0;0 0 1];
+
+for i=1:r
+    for j=1:c
+        temp=[i;j;1];
+        temp=hmirror*temp;
+        x=temp(1,1);
+        y=temp(2,1);
+        res(i,j)=I(x,y+c+1);
+        %           res(i,j)=I(i,c-j+1);%以上等同这一句
+    end
+end
+subplot(132);imshow(uint8(res));title('水平变换');
+
+for i=1:r
+    for j=1:c
+        temp=[i;j;1];
+        temp=vmirror*temp;
+        x=temp(1,1);
+        y=temp(2,1);
+        res(i,j)=I(x+r+1,y);
+        %         res(i,j)=I(r-i+1,j);%以上等同这一句
+        
+    end
+end
+subplot(133);imshow(uint8(res));title('垂直变换');
+```    
