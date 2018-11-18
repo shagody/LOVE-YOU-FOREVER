@@ -63,7 +63,7 @@ figure(1);imshow(init);
 [r, c] =size(init); % 获取图像大小
 Sx = 0.5; % X轴缩放量
 Sy = 1; % Y轴缩放量
-res = zeros(Sx * r, Sy * c); % 构造结果矩阵。每个像素点默认初始化为0（黑色）
+res = zeros(round(Sx * r), round(Sy * c)); % 构造结果矩阵。每个像素点默认初始化为0（黑色）
 tras = [1/Sx 0 0; 0 1/Sy 0; 0 0 1]; % 缩放的变换矩阵 
 
 for i = 1 : Sx * r
