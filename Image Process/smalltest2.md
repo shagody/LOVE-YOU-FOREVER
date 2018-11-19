@@ -56,6 +56,19 @@ for i=1:r
 end
 subplot(133);imshow(uint8(res));title('垂直变换');
 ```    
+## 图像剪切
+```
+init = rgb2gray(imread('E:/cute.jpg')); % 读取图像
+figure(1);imshow(init);
+x0=50;
+y0=50;
+x1=240;
+y1=240;
+[r, c] =size(init); % 获取图像大小
+res = zeros(r, c);
+res=init(x0:x1,y0:y1);
+figure(2);imshow(uint8(res)); % 显示图像
+```
 ## 图像缩放
 ```
 init = rgb2gray(imread('F:/cute.jpg')); % 读取图像
