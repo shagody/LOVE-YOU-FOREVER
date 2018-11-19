@@ -1,3 +1,5 @@
+
+```
 % I=imread('F:/test.jpg');
 I=imread('F:/gakki.bmp');
 % imtool(I);
@@ -18,3 +20,4 @@ imshow(J);
 L=ind2rgb(K,map);
 subplot(224);
 imshow(L);
+```
