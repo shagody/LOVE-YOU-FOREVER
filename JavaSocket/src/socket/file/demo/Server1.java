@@ -42,6 +42,7 @@ public class Server1 {
 				}
 			});
 			th.run(); //启动线程运行
+			server.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}     
