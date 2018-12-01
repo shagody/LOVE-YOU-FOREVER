@@ -14,7 +14,7 @@ public class ClientDemo1 {
 		Scanner inScanner = null;
 		PrintWriter pwtoserver = null;
 		try {
-			socket = new Socket("10.136.0.134", 6666);
+			socket = new Socket("10.200.112.210", 6666);//连接到指定主机的端口
 			inScanner = new Scanner(socket.getInputStream()); 
 			System.out.println(inScanner.nextLine());
 			pwtoserver = new PrintWriter(socket.getOutputStream());
