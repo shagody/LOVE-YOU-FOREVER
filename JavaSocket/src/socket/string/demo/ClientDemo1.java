@@ -1,3 +1,4 @@
+package socket.string.demo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,7 +14,7 @@ public class ClientDemo1 {
 		Scanner inScanner = null;
 		PrintWriter pwtoserver = null;
 		try {
-			socket = new Socket("192.168.177.1", 6666);
+			socket = new Socket("10.136.0.134", 6666);
 			inScanner = new Scanner(socket.getInputStream()); 
 			System.out.println(inScanner.nextLine());
 			pwtoserver = new PrintWriter(socket.getOutputStream());

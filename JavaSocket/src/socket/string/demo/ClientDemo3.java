@@ -1,3 +1,4 @@
+package socket.string.demo;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -5,7 +6,7 @@ import java.net.UnknownHostException;
 
 public class ClientDemo3 {
 	public static void main(String[] args) throws UnknownHostException, IOException {
-		Socket s=new Socket("localhost",8888);
+		Socket s=new Socket("10.136.0.134",8888);
 		System.out.println("建立了与服务器的连接");
 		
 		OutputStream oos=s.getOutputStream();

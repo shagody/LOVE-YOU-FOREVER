@@ -1,3 +1,4 @@
+package socket.string.demo;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +9,7 @@ import java.net.Socket;
 public class ClientDemo2 {
 	public static void main(String[] args) {
 		 try {
-		        Socket socket = new Socket("10.20.101.215", 30004);
+		        Socket socket = new Socket("10.136.0.134", 30004);
 
 		        //获取控制台输入的内容
 		        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
